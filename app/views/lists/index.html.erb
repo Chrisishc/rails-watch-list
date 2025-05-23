@@ -1,0 +1,13 @@
+<div class="container text-center">
+  <h1 class="my-4">Movies List</h1>
+
+<div class="text-center">
+<ul>
+  <% @lists.each do |list| %>
+    <li><%= link_to list.name, list_path(list.id) %></li>
+  <% end %>
+</ul>
+</div>
+
+  <%= link_to "Add new list", new_list_path(@list), class: "btn btn-primary mt-4" %>
+</div>
