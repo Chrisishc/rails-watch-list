@@ -1,13 +1,19 @@
-<div class="container text-center">
-  <h1 class="my-4">Movies List</h1>
-
-<div class="text-center">
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list.id) %></li>
-  <% end %>
-</ul>
+<div class="card-category">
+  <h1>Here is your list</h1>
 </div>
 
-  <%= link_to "Add new list", new_list_path(@list), class: "btn btn-primary mt-4" %>
+<%# style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://t3.ftcdn.net/jpg/05/00/81/96/360_F_500819621_7bRfuKkKyaRYU6aJ1Sa9RBCPdscka6Iq.jpg) %>
+
+<div class="d-flex justify-content-end m-5">
+  <%= link_to "+ Create new list", new_list_path(@list), class: "btn btn-success mb-2" %>
+</div>
+
+<div class="container">
+  <div class="cards">
+  <% @lists.each do |list| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i0.wp.com/drunkenanimeblog.com/wp-content/uploads/2023/05/movies-movie-theater.gif?fit=498%2C274&ssl=1)">
+        <%= link_to list.name, list_path(list.id), class:"fw-light", style:"color: white"%>
+      </div>
+    <% end %>
+  </div>
 </div>

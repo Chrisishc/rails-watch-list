@@ -2,9 +2,8 @@
   <div class= "mx-auto">
     <%=simple_form_for @list do |f| %>
     <%= f.input :name %>
-    <%# <%= f.association :movie, label: "Choose a movie"%>
     <%= f.button :submit, "Add this list", class: "btn btn-primary mb-2"%>
     <% end %>
   </div>
-<%= link_to "Back to the list", lists_path, class: "btn btn-primary" %>
+<%= link_to "Back to the list", lists_path, class: "btn btn-info" %>
 </div>
